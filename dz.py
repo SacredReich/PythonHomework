@@ -77,17 +77,14 @@ def chocolateSlise():
     else:
 
         if (aSide > bSide):
-            # if (xSlise % aSide == 0 or xSlise % bSide == 0 & aSide*bSide-bSide >= xSlise >= bSide): Я НЕ МОГУ ПОНЯТЬ, ПОЧЕМУ ЭТА СТРОКА НЕ ПРОПУСКАЕТ ЗНАЧЕНИЯ, РАВНЫЕ СТОРОНЕ ШОКОЛАДКИ
-            # ПРИХОДИТСЯ ДОБАВЛЯТЬ УСЛОВИЕ, ПРИ КОТОРОМ СРЕЗ МОЖЕТ БЫТЬ РАВЕН СТОРОНАМ
-            if (xSlise % aSide == 0 or xSlise % bSide == 0 & aSide*bSide-bSide > xSlise > bSide or xSlise == aSide or bSide == bSide):
+            if (xSlise % aSide == 0 or xSlise % bSide == 0 and aSide*bSide-bSide >= xSlise >= bSide):
                 print(
                     f"Шоколадка ({aSide}*{bSide}), дольки в отломанном кусочке ({xSlise}) -> yes")
             else:
                 print(
                     f"Шоколадка ({aSide}*{bSide}), дольки в отломанном кусочке ({xSlise}) -> no")
         else:
-            # if (xSlise % aSide == 0 or xSlise % bSide == 0 & aSide*bSide-aSide >= xSlise >= aSide): И ЭТА СТРОКА СООТВЕТСВЕННО ТОЖЕ
-            if (xSlise % aSide == 0 or xSlise % bSide == 0 & aSide*bSide-aSide >= xSlise >= aSide or xSlise == aSide or bSide == bSide):
+            if (xSlise % aSide == 0 or xSlise % bSide == 0 and aSide*bSide-aSide >= xSlise >= aSide):
                 print(
                     f"Шоколадка ({aSide}*{bSide}), дольки в отломанном кусочке ({xSlise}) -> yes")
             else:
